@@ -3,12 +3,12 @@ import { statusFilters } from 'redux/constants';
 
 import { Button } from 'components/Button/Button';
 import css from './StatusFilter.module.css';
-import { getStatusFilter } from 'redux/selectors';
+import { selectStatusFilter } from 'redux/selectors';
 import { setStatusFilter } from 'redux/filterSlice';
 // import { setStatusFilter } from 'redux/actions';
 
 export const StatusFilter = () => {
-  const filter = useSelector(getStatusFilter);
+  const filter = useSelector(selectStatusFilter);
   const dispatch = useDispatch();
 
   const filterHandler = filter => {
